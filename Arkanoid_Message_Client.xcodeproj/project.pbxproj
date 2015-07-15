@@ -8,9 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		647FAEC21B55CAFA000BC69E /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 647FAEC11B55CAFA000BC69E /* main.cpp */; };
-		647FAED11B55DE9C000BC69E /* Message.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 647FAEC91B55DE94000BC69E /* Message.cpp */; };
-		647FAED21B55DE9C000BC69E /* tcp_connection.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 647FAECB1B55DE94000BC69E /* tcp_connection.cpp */; };
-		647FAED31B55DE9C000BC69E /* TCPClient.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 647FAECD1B55DE94000BC69E /* TCPClient.cpp */; };
 		647FAF5D1B55DF07000BC69E /* libPocoFoundation.30.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 647FAED51B55DF06000BC69E /* libPocoFoundation.30.dylib */; };
 		647FAF5E1B55DF07000BC69E /* libPocoFoundation.30.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 647FAED61B55DF06000BC69E /* libPocoFoundation.30.dylib */; };
 		647FAF5F1B55DF07000BC69E /* libPocoFoundationd.30.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 647FAED71B55DF06000BC69E /* libPocoFoundationd.30.dylib */; };
@@ -165,12 +162,6 @@
 /* Begin PBXFileReference section */
 		647FAEBE1B55CAFA000BC69E /* Arkanoid_Message_Client */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Arkanoid_Message_Client; sourceTree = BUILT_PRODUCTS_DIR; };
 		647FAEC11B55CAFA000BC69E /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
-		647FAEC91B55DE94000BC69E /* Message.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Message.cpp; sourceTree = "<group>"; };
-		647FAECA1B55DE94000BC69E /* Message.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Message.h; sourceTree = "<group>"; };
-		647FAECB1B55DE94000BC69E /* tcp_connection.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = tcp_connection.cpp; sourceTree = "<group>"; };
-		647FAECC1B55DE94000BC69E /* tcp_connection.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = tcp_connection.h; sourceTree = "<group>"; };
-		647FAECD1B55DE94000BC69E /* TCPClient.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = TCPClient.cpp; sourceTree = "<group>"; };
-		647FAECE1B55DE94000BC69E /* TCPClient.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TCPClient.h; sourceTree = "<group>"; };
 		647FAED51B55DF06000BC69E /* libPocoFoundation.30.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libPocoFoundation.30.dylib; path = /usr/local/lib/libPocoFoundation.30.dylib; sourceTree = "<absolute>"; };
 		647FAED61B55DF06000BC69E /* libPocoFoundation.30.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libPocoFoundation.30.dylib; path = /usr/local/lib/libPocoFoundation.30.dylib; sourceTree = "<absolute>"; };
 		647FAED71B55DF06000BC69E /* libPocoFoundationd.30.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libPocoFoundationd.30.dylib; path = /usr/local/lib/libPocoFoundationd.30.dylib; sourceTree = "<absolute>"; };
@@ -487,12 +478,6 @@
 		647FAEC81B55DE94000BC69E /* Network */ = {
 			isa = PBXGroup;
 			children = (
-				647FAEC91B55DE94000BC69E /* Message.cpp */,
-				647FAECA1B55DE94000BC69E /* Message.h */,
-				647FAECB1B55DE94000BC69E /* tcp_connection.cpp */,
-				647FAECC1B55DE94000BC69E /* tcp_connection.h */,
-				647FAECD1B55DE94000BC69E /* TCPClient.cpp */,
-				647FAECE1B55DE94000BC69E /* TCPClient.h */,
 				647FB0FE1B56C778000BC69E /* udp_client.cpp */,
 				647FB0FF1B56C778000BC69E /* udp_client.h */,
 			);
@@ -698,11 +683,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				647FAED31B55DE9C000BC69E /* TCPClient.cpp in Sources */,
 				647FAEC21B55CAFA000BC69E /* main.cpp in Sources */,
-				647FAED21B55DE9C000BC69E /* tcp_connection.cpp in Sources */,
 				647FB1001B56C778000BC69E /* udp_client.cpp in Sources */,
-				647FAED11B55DE9C000BC69E /* Message.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
