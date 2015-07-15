@@ -1,7 +1,7 @@
 #include <cstdlib>
 #include <iostream>
 #include <string>
-#include "TCPClient.h"
+#include "udp_client.h"
 
 int main(int argc, char* argv[])
 {
@@ -9,33 +9,31 @@ int main(int argc, char* argv[])
     {
         
         std::string host = "127.0.0.1";
-        std::string port = "7000";
+        std::string port = "7200";
         
         boost::asio::io_service io_service;
         
         
-        //Nos conectamos al servicio, si no funciona, usar una cadena directamente.
-        tcp::resolver resolver(io_service);
-        auto endpoint_iterator = resolver.resolve({ host.c_str(), port.c_str() });
-        TCPClient c(io_service, endpoint_iterator);
+        //Nos conectamos al servicio. Los parámetros son del host al cual vamos a bindear
+        udp::resolver resolver(io_service);
+        udp_client c(io_service, host, port);
         
         
         //Separamos el thread, esto para poder escribir con cin, pero en el caso del juego es para que pueda seguir ejecutándose en su propio demonio. Con el método write de TCPClient podemos escribir sin problemas dentro del hilo principal
         std::thread t([&io_service](){ io_service.run(); });
-        
+        std::string msg;
         
         //Construimos el mensaje
-        char line[Message::max_body_length + 1];
-        while (std::cin.getline(line, Message::max_body_length + 1))
+        while(msg.compare(std::string("exit"))!=0)
         {
-            Message msg;
-            msg.body_length(std::strlen(line));
-            std::memcpy(msg.body(), line, msg.body_length());
-            msg.encode_header();
-            c.write(msg);
+            std::cout<<"Escribe algo: ";
+            std::cin>>msg;
+            c.send(msg);
+            std::cout<<c.receive();
+
         }
         
-        c.close();
+        
         t.join();
     }
     catch (std::exception& e)

@@ -147,6 +147,7 @@
 		647FAFE21B55DF07000BC69E /* libboost_iostreams-mt.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 647FAF5A1B55DF07000BC69E /* libboost_iostreams-mt.a */; };
 		647FAFE31B55DF07000BC69E /* libboost_iostreams-mt.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 647FAF5B1B55DF07000BC69E /* libboost_iostreams-mt.dylib */; };
 		647FAFE41B55DF07000BC69E /* libboost_iostreams.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 647FAF5C1B55DF07000BC69E /* libboost_iostreams.a */; };
+		647FB1001B56C778000BC69E /* udp_client.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 647FB0FE1B56C778000BC69E /* udp_client.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -306,6 +307,8 @@
 		647FAF5A1B55DF07000BC69E /* libboost_iostreams-mt.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libboost_iostreams-mt.a"; path = "/usr/local/Cellar/boost/1.58.0/lib/libboost_iostreams-mt.a"; sourceTree = "<absolute>"; };
 		647FAF5B1B55DF07000BC69E /* libboost_iostreams-mt.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libboost_iostreams-mt.dylib"; path = "/usr/local/Cellar/boost/1.58.0/lib/libboost_iostreams-mt.dylib"; sourceTree = "<absolute>"; };
 		647FAF5C1B55DF07000BC69E /* libboost_iostreams.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libboost_iostreams.a; path = /usr/local/Cellar/boost/1.58.0/lib/libboost_iostreams.a; sourceTree = "<absolute>"; };
+		647FB0FE1B56C778000BC69E /* udp_client.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = udp_client.cpp; sourceTree = "<group>"; };
+		647FB0FF1B56C778000BC69E /* udp_client.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = udp_client.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -490,6 +493,8 @@
 				647FAECC1B55DE94000BC69E /* tcp_connection.h */,
 				647FAECD1B55DE94000BC69E /* TCPClient.cpp */,
 				647FAECE1B55DE94000BC69E /* TCPClient.h */,
+				647FB0FE1B56C778000BC69E /* udp_client.cpp */,
+				647FB0FF1B56C778000BC69E /* udp_client.h */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -696,6 +701,7 @@
 				647FAED31B55DE9C000BC69E /* TCPClient.cpp in Sources */,
 				647FAEC21B55CAFA000BC69E /* main.cpp in Sources */,
 				647FAED21B55DE9C000BC69E /* tcp_connection.cpp in Sources */,
+				647FB1001B56C778000BC69E /* udp_client.cpp in Sources */,
 				647FAED11B55DE9C000BC69E /* Message.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -828,6 +834,7 @@
 				647FAEC71B55CAFA000BC69E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
