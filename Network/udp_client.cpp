@@ -9,7 +9,7 @@
 
 #include "udp_client.h"
 
-udp_client::udp_client(boost::asio::io_service &io_service, std::string host, std::string port): receiver_endpoint(udp::v4(), std::atoi(port.c_str())), socket(io_service)
+udp_client::udp_client(boost::asio::io_service &io_service, std::string host, std::string port): receiver_endpoint(boost::asio::ip::address::from_string(host.c_str()), std::atoi(port.c_str())), socket(io_service)
 {
     socket.open(udp::v4());
 
@@ -30,7 +30,7 @@ std::string udp_client::receive()
 {
     boost::array<char, 5000> recv_buf;
     recv_buf.assign('\0');
-    size_t len = socket.receive_from(boost::asio::buffer(recv_buf), sender_endpoint);
 
+    size_t len = socket.receive_from(boost::asio::buffer(recv_buf), sender_endpoint);
     return std::string(recv_buf.data());
 }
