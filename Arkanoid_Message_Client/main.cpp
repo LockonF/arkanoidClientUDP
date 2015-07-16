@@ -24,12 +24,18 @@ int main(int argc, char* argv[])
         std::string msg;
         
         //Construimos el mensaje
-        while(msg.compare(std::string("exit"))!=0)
+
+        
+        std::cout<<"Escribe algo: ";
+        std::cin>>msg;
+        c.send(msg);
+        
+        //Se queda recibiendo del servidor
+        while(1)
         {
-            std::cout<<"Escribe algo: ";
-            std::cin>>msg;
-            c.send(msg);
-            std::cout<<c.receive();
+           
+            std::cout<<"Trying to receive: "<<std::endl;
+            std::cout<<c.receive()<<std::endl;
 
         }
         

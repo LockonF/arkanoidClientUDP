@@ -30,7 +30,6 @@ std::string udp_client::receive()
 {
     boost::array<char, 5000> recv_buf;
     recv_buf.assign('\0');
-
     size_t len = socket.receive_from(boost::asio::buffer(recv_buf), sender_endpoint);
     return std::string(recv_buf.data());
 }
